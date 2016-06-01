@@ -61,4 +61,54 @@ Available options:
     - `hex` - `[0-9a-f]`
 
 All options are optional.
- 
+
+## Methods
+
+`sequelize-tokenify` module creates several instance methods with names depend on the token field:
+
+- `generate[TokenField]` - Generates a new token without saving the model.
+- `update[TokenField]` - Generates a new token and saves the model.
+
+For `recovery_token` field module will create these methods:
+
+- `generateRecoveryToken`
+- `updateRecoveryToken`
+
+So you can use this module several times for the same model:
+
+```javascript
+var SequelizeTokenify = require('sequelize-tokenify');
+
+module.exports = function(sequelize, Sequelize) {
+
+    var User = sequelize.define('User', {
+        id: {
+            type: Sequelize.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        email: {
+            type: Sequelize.STRING,
+            unique: true
+        },
+        token: {
+            type: Sequelize.STRING,
+            unique: true
+        },
+        recovery_token: {
+            type: Sequelize.STRING,
+            unique: true
+        }
+    });
+
+    // For token field
+    SequelizeTokenify.tokenify(User);
+
+    // For recovery_token field
+    SequelizeTokenify.tokenify(User, {
+        field: 'recovery_token'
+    });
+
+    return User;
+};
+```

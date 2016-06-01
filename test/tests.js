@@ -132,6 +132,36 @@ describe('sequelize-tokenify', function () {
                 });
             });
         });
+
+        it('should generate a new token', function () {
+            SequelizeTokenify.tokenify(Model);
+
+            var instance = null;
+            return Model.create().then(function(inst) {
+                instance = inst;
+                return expect(instance.generateToken).to.be.instanceof(Function);
+            }).then(function() {
+                var lastToken = instance.token;
+                return instance.generateToken().then(function(token) {
+                    return expect(token).to.not.be.eq(lastToken);
+                });
+            });
+        });
+
+        it('should update a new token', function () {
+            SequelizeTokenify.tokenify(Model);
+
+            var instance = null;
+            return Model.create().then(function(inst) {
+                instance = inst;
+                return expect(instance.updateToken).to.be.instanceof(Function);
+            }).then(function() {
+                var lastToken = instance.token;
+                return instance.updateToken().then(function(instance) {
+                    return expect(instance.token).to.not.be.eq(lastToken);
+                });
+            });
+        });
     });
 
     after(function () {
