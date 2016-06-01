@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "4"
+cache:
+  directories:
+    - node_modules
+services:
+  - mysql
+before_script:
+  - mysql -e 'create database sequelize_tokenify_test;'
+branches:
+  only:
+    - master
