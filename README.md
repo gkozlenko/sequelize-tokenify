@@ -54,9 +54,10 @@ Available options:
 - `scope` - Array of field names in the model that are used to limit the uniqueness token generation.
 - `length` - Length of the token value. Default value: `10`.
 - `charset` - Character set for the token value. Default value: `alphanumeric`. Available values:
-    - `alphanumeric` - `[0-9a-zA-Z]`
-    - `alphabetic` - `[a-zA-Z]`
-    - `numeric` - `[0-9]`
-    - `hex` - `[0-9a-f]`
+  - `alphanumeric` - `[0-9a-zA-Z]`
+  - `alphabetic` - `[a-zA-Z]`
+  - `numeric` - `[0-9]`
+  - `hex` - `[0-9a-f]`
 
  All options are optional.
+ 
