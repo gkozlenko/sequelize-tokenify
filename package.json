@@ -1,29 +1,39 @@
 {
   "name": "sequelize-tokenify",
-  "description": "Add unique tokens to sequelize models",
   "version": "0.0.1",
-  "author": "Gennadiy Kozlenko <gennadiy.kozlenko@gmail.com>",
+  "description": "Add unique tokens to sequelize models",
+  "license": "MIT",
+  "main": "index.js",
   "readme": "README.md",
+  "author": {
+    "name": "Gennadiy Kozlenko",
+    "email": "gennadiy.kozlenko@gmail.com",
+    "url": "https://github.com/pipll/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/pipll/sequelize-tokenify.git"
   },
-  "main": "index.js",
   "keywords": [
     "token",
     "sequelize",
     "sequelize-plugin",
     "orm"
   ],
-  "license": "MIT",
   "scripts": {
-    "prepublish": "npm prune"
+    "prepublish": "npm prune",
+    "test": "mocha ./test/*"
   },
   "dependencies": {
     "bluebird": "^3.4.0",
-    "lodash": "^4.13.1"
+    "lodash": "^4.13.1",
+    "randomstring": "^1.1.5"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "mocha": "^2.5.3",
+    "mysql": "^2.10.2",
     "sequelize": "^3.23.3"
   }
 }
