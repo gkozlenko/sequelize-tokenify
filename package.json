@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "Add unique tokens to sequelize models",
   "license": "MIT",
-  "main": "index.js",
-  "readme": "README.md",
+  "main": "index",
   "author": {
     "name": "Gennadiy Kozlenko",
     "email": "gennadiy.kozlenko@gmail.com",

@@ -14,6 +14,7 @@ Add unique tokens to sequelize models.
 var SequelizeTokenify = require('sequelize-tokenify');
 
 module.exports = function(sequelize, Sequelize) {
+
     var User = sequelize.define('User', {
         id: {
             type: Sequelize.INTEGER,
@@ -53,11 +54,11 @@ Available options:
 - `field` - Field name in the model to store token value. Default value: `token`.
 - `scope` - Array of field names in the model that are used to limit the uniqueness token generation.
 - `length` - Length of the token value. Default value: `10`.
-- `charset` - Character set for the token value. Default value: `alphanumeric`. Available values:
-  - `alphanumeric` - `[0-9a-zA-Z]`
-  - `alphabetic` - `[a-zA-Z]`
-  - `numeric` - `[0-9]`
-  - `hex` - `[0-9a-f]`
+- `charset` - Character set for the token value. Default value: `alphanumeric`.
+    - `alphanumeric` - `[0-9a-zA-Z]`
+    - `alphabetic` - `[a-zA-Z]`
+    - `numeric` - `[0-9]`
+    - `hex` - `[0-9a-f]`
 
  All options are optional.
  
