@@ -1,2 +1,4 @@
 .idea
+.editorconfig
+.travis.yml
 *.log
