@@ -1,6 +1,7 @@
 'use strict';
 
 var Sequelize = require('sequelize');
+var Promise = require('bluebird');
 
 var dbUsername = process.env.DB_USER || 'root';
 var dbPassword = process.env.DB_PW || null;
