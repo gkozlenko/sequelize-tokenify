@@ -38,6 +38,7 @@ var Model = {};
 var modelId = 0;
 
 describe('sequelize-tokenify', function () {
+    this.timeout(10000);
 
     describe('tokens', function () {
 
