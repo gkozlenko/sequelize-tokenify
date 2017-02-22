@@ -1,6 +1,6 @@
 {
   "name": "sequelize-tokenify",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Add unique tokens to sequelize models",
   "license": "MIT",
   "main": "index",
@@ -33,6 +33,6 @@
     "chai-as-promised": "^6.0.0",
     "mocha": "^3.2.0",
     "mysql": "^2.13.0",
-    "sequelize": "^3.30.1"
+    "sequelize": "^3.30.2"
   }
 }
