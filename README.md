@@ -6,7 +6,9 @@ Add unique tokens to sequelize models.
 
 ## Installation
 
-`npm install sequelize-tokenify`
+```bash
+$ npm install sequelize-tokenify
+```
 
 ## Usage
 
