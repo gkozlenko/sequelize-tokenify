@@ -65,7 +65,7 @@ describe('sequelize-tokenify', function () {
 
             return Model.create().then(function (instance) {
                 return [
-                    expect(instance.token).to.be.empty,
+                    expect(instance.token).to.be.undefined,
                     expect(instance.code).to.not.be.empty,
                     expect(instance.code).to.not.match(/[a-zA-Z]/),
                     expect(instance.code.length).to.eq(6)
@@ -125,7 +125,7 @@ describe('sequelize-tokenify', function () {
             var instance = null;
             return Model.create().then(function(inst) {
                 instance = inst;
-                return expect(instance.token).to.be.empty;
+                return expect(instance.token).to.be.undefined;
             }).then(function() {
                 SequelizeTokenify.tokenify(Model);
                 instance.code = 'new.code';
