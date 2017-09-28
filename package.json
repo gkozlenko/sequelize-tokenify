@@ -29,11 +29,11 @@
   },
   "devDependencies": {
     "bluebird": "^3.5.0",
-    "chai": "^4.1.1",
+    "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "mocha": "^3.5.0",
+    "mocha": "^3.5.3",
     "mysql": "^2.14.1",
     "mysql2": "^1.4.2",
-    "sequelize": "^4.7.5"
+    "sequelize": "^4.11.3"
   }
 }
