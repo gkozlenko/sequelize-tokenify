@@ -1,6 +1,6 @@
 {
   "name": "sequelize-tokenify",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Add unique tokens to sequelize models",
   "license": "MIT",
   "main": "index",
