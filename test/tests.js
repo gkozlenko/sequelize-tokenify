@@ -8,8 +8,7 @@ var dbPassword = process.env.DB_PW || null;
 var sequelize = new Sequelize('sequelize_tokenify_test', dbUsername, dbPassword, {
     host: 'localhost',
     dialect: 'mysql',
-    logging: false,
-    operatorsAliases: false
+    logging: false
 });
 
 var SequelizeTokenify = require('../index');

@@ -2,5 +2,8 @@
 .travis.yml
 .editorconfig
 .eslintrc
+package-lock.json
 test
 *.log
+.nyc_output
+coverage

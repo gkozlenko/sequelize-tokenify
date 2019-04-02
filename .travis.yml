@@ -1,5 +1,6 @@
 language: node_js
 node_js:
+  - "11"
   - "10"
   - "9"
   - "8"
@@ -7,13 +8,31 @@ node_js:
   - "6"
   - "5"
   - "4"
+
+env:
+  global:
+    - CC_TEST_REPORTER_ID=30bb8e2d0d9643f4168f9e51b4f12461a631e16ed834bdf675e2d9ab8b8ba064
+
 cache:
   directories:
     - node_modules
-services:
-  - mysql
-before_script:
-  - mysql -e 'create database sequelize_tokenify_test;'
+
 branches:
   only:
     - master
+
+services:
+  - mysql
+
+before_script:
+  - mysql -e 'create database sequelize_tokenify_test;'
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+script:
+  - npm run lint
+  - npm test
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

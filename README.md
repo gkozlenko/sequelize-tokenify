@@ -1,6 +1,10 @@
 # sequelize-tokenify
 
-[![Build Status](https://travis-ci.org/pipll/sequelize-tokenify.svg?branch=master)](https://travis-ci.org/pipll/sequelize-tokenify) [![npm](https://img.shields.io/npm/v/sequelize-tokenify.svg)](https://www.npmjs.com/package/sequelize-tokenify) [![Code Climate](https://codeclimate.com/github/pipll/sequelize-tokenify/badges/gpa.svg)](https://codeclimate.com/github/pipll/sequelize-tokenify) ![GitHub license](https://img.shields.io/github/license/pipll/sequelize-tokenify.svg)
+[![Build Status](https://travis-ci.org/gkozlenko/sequelize-tokenify.svg?branch=master)](https://travis-ci.org/gkozlenko/sequelize-tokenify)
+[![npm Version](https://img.shields.io/npm/v/sequelize-tokenify.svg)](https://www.npmjs.com/package/sequelize-tokenify)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d70ff40c820582c990cb/maintainability)](https://codeclimate.com/github/gkozlenko/sequelize-tokenify/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/d70ff40c820582c990cb/test_coverage)](https://codeclimate.com/github/gkozlenko/sequelize-tokenify/test_coverage)
+[![GitHub License](https://img.shields.io/github/license/gkozlenko/sequelize-tokenify.svg)](https://github.com/gkozlenko/sequelize-tokenify/blob/master/LICENSE)
 
 Add unique tokens to sequelize models
 
