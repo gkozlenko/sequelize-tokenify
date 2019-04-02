@@ -1,6 +1,6 @@
 {
   "name": "sequelize-tokenify",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "Add unique tokens to sequelize models",
   "license": "MIT",
   "main": "index",
@@ -13,6 +13,9 @@
     "type": "git",
     "url": "https://github.com/gkozlenko/sequelize-tokenify.git"
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "keywords": [
     "token",
     "sequelize",
@@ -20,8 +23,8 @@
     "orm"
   ],
   "scripts": {
-    "prepublish": "npm prune",
-    "test": "nyc --reporter=lcov mocha ./test/*",
+    "prepare": "npm prune",
+    "test": "nyc --reporter=lcov mocha ./test/tests.js",
     "lint": "eslint \"lib/**\""
   },
   "dependencies": {
@@ -32,8 +35,8 @@
     "bluebird": "^3.5.3",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "eslint": "^4.19.1",
-    "mocha": "^5.2.0",
+    "eslint": "^5.16.0",
+    "mocha": "^6.0.2",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.5",
     "nyc": "^13.3.0",

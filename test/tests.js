@@ -1,41 +1,41 @@
 'use strict';
 
-var Sequelize = require('sequelize');
-var Promise = require('bluebird');
+const Sequelize = require('sequelize');
+const Promise = require('bluebird');
 
-var dbUsername = process.env.DB_USER || 'root';
-var dbPassword = process.env.DB_PW || null;
-var sequelize = new Sequelize('sequelize_tokenify_test', dbUsername, dbPassword, {
+const dbUsername = process.env.DB_USER || 'root';
+const dbPassword = process.env.DB_PW || null;
+const sequelize = new Sequelize('sequelize_tokenify_test', dbUsername, dbPassword, {
     host: 'localhost',
     dialect: 'mysql',
-    logging: false
+    logging: false,
 });
 
-var SequelizeTokenify = require('../index');
+const SequelizeTokenify = require('../index');
 
-var chai = require('chai');
+const chai = require('chai');
 chai.use(require('chai-as-promised'));
-var expect = chai.expect;
+const expect = chai.expect;
 
 function generateModel(name) {
     return sequelize.define(name, {
         token: {
-            type: Sequelize.STRING
+            type: Sequelize.STRING,
         },
         code: {
-            type: Sequelize.STRING
+            type: Sequelize.STRING,
         },
         name: {
-            type: Sequelize.STRING
+            type: Sequelize.STRING,
         },
         type: {
-            type: Sequelize.STRING
-        }
+            type: Sequelize.STRING,
+        },
     });
 }
 
-var Model = {};
-var modelId = 0;
+let Model = {};
+let modelId = 0;
 
 describe('sequelize-tokenify', function () {
     this.timeout(10000);
@@ -60,7 +60,7 @@ describe('sequelize-tokenify', function () {
             SequelizeTokenify.tokenify(Model, {
                 field: 'code',
                 length: 6,
-                charset: 'numeric'
+                charset: 'numeric',
             });
 
             return Model.create().then(function (instance) {
@@ -68,7 +68,7 @@ describe('sequelize-tokenify', function () {
                     expect(instance.token).to.be.undefined,
                     expect(instance.code).to.not.be.empty,
                     expect(instance.code).to.not.match(/[a-zA-Z]/),
-                    expect(instance.code.length).to.eq(6)
+                    expect(instance.code.length).to.eq(6),
                 ];
             });
         });
@@ -76,7 +76,7 @@ describe('sequelize-tokenify', function () {
         it('should create a unique token', function () {
             SequelizeTokenify.tokenify(Model, {
                 length: 1,
-                charset: 'numeric'
+                charset: 'numeric',
             });
 
             return Promise.all(['0', '1', '2', '3', '4', '5', '6', '7', '8'].map(function (token) {
@@ -92,7 +92,7 @@ describe('sequelize-tokenify', function () {
             SequelizeTokenify.tokenify(Model, {
                 length: 1,
                 charset: 'numeric',
-                scope: ['type']
+                scope: ['type'],
             });
 
             return Promise.all(['0', '1', '2', '3', '4', '5', '6', '7', '8'].map(function (token) {
@@ -122,7 +122,7 @@ describe('sequelize-tokenify', function () {
         });
 
         it('should update token', function () {
-            var instance = null;
+            let instance = null;
             return Model.create().then(function (inst) {
                 instance = inst;
                 return expect(instance.token).to.be.undefined;
@@ -138,12 +138,12 @@ describe('sequelize-tokenify', function () {
         it('should generate a new token', function () {
             SequelizeTokenify.tokenify(Model);
 
-            var instance = null;
+            let instance = null;
             return Model.create().then(function (inst) {
                 instance = inst;
                 return expect(instance.generateToken).to.be.instanceof(Function);
             }).then(function () {
-                var lastToken = instance.token;
+                let lastToken = instance.token;
                 return instance.generateToken().then(function (token) {
                     return expect(token).to.not.be.eq(lastToken);
                 });
@@ -153,12 +153,12 @@ describe('sequelize-tokenify', function () {
         it('should update a new token', function () {
             SequelizeTokenify.tokenify(Model);
 
-            var instance = null;
+            let instance = null;
             return Model.create().then(function (inst) {
                 instance = inst;
                 return expect(instance.updateToken).to.be.instanceof(Function);
             }).then(function () {
-                var lastToken = instance.token;
+                let lastToken = instance.token;
                 return instance.updateToken().then(function (instance) {
                     return expect(instance.token).to.not.be.eq(lastToken);
                 });

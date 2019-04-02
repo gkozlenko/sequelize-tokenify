@@ -1,6 +1,10 @@
 {
   "extends": "eslint:recommended",
   "rules": {
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
     "no-console": "error",
     "strict": [
       "error",
@@ -78,6 +82,7 @@
   },
   "env": {
     "node": true,
+    "es6": true,
     "mocha": true
   }
 }
