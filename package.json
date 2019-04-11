@@ -32,7 +32,7 @@
     "randomstring": "^1.1.5"
   },
   "devDependencies": {
-    "bluebird": "^3.5.3",
+    "bluebird": "^3.5.4",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "eslint": "^5.16.0",
@@ -40,6 +40,6 @@
     "mysql": "^2.16.0",
     "mysql2": "^1.6.5",
     "nyc": "^13.3.0",
-    "sequelize": "^5.2.9"
+    "sequelize": "^5.3.1"
   }
 }
