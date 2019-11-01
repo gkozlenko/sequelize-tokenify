@@ -7,3 +7,4 @@ test
 *.log
 .nyc_output
 coverage
+.git
