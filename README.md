@@ -5,6 +5,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/d70ff40c820582c990cb/maintainability)](https://codeclimate.com/github/gkozlenko/sequelize-tokenify/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/d70ff40c820582c990cb/test_coverage)](https://codeclimate.com/github/gkozlenko/sequelize-tokenify/test_coverage)
 [![GitHub License](https://img.shields.io/github/license/gkozlenko/sequelize-tokenify.svg)](https://github.com/gkozlenko/sequelize-tokenify/blob/master/LICENSE)
+[![Donate using PayPal](https://img.shields.io/badge/paypal-donate-green.svg)](https://www.paypal.me/pipll)
+[![Buy me a Coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-green.svg)](https://www.buymeacoffee.com/NIUeF95)
 
 Add unique tokens to sequelize models
 
