@@ -28,18 +28,18 @@
     "lint": "eslint \"lib/**\""
   },
   "dependencies": {
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "randomstring": "^1.1.5"
   },
   "devDependencies": {
     "bluebird": "^3.7.2",
-    "chai": "^4.2.0",
+    "chai": "^4.3.3",
     "chai-as-promised": "^7.1.1",
-    "eslint": "^7.7.0",
-    "mocha": "^8.1.1",
+    "eslint": "^7.25.0",
+    "mocha": "^8.3.2",
     "mysql": "^2.18.1",
-    "mysql2": "^2.1.0",
+    "mysql2": "^2.2.5",
     "nyc": "^15.1.0",
-    "sequelize": "^6.3.4"
+    "sequelize": "^6.6.2"
   }
 }
