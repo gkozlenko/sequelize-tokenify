@@ -19,7 +19,7 @@ $ npm install sequelize-tokenify
 ## Usage
 
 ```javascript
-var SequelizeTokenify = require('sequelize-tokenify');
+const SequelizeTokenify = require('sequelize-tokenify');
 
 module.exports = function(sequelize, Sequelize) {
 
