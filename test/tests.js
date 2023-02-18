@@ -1,10 +1,9 @@
 'use strict';
 
 const Sequelize = require('sequelize');
-const Promise = require('bluebird');
 
-const dbUsername = process.env.DB_USER || 'root';
-const dbPassword = process.env.DB_PW || null;
+const dbUsername = process.env.DB_USER || 'devuser';
+const dbPassword = process.env.DB_PW || 'devpass';
 const sequelize = new Sequelize('sequelize_tokenify_test', dbUsername, dbPassword, {
     host: 'localhost',
     dialect: 'mysql',
@@ -14,7 +13,6 @@ const sequelize = new Sequelize('sequelize_tokenify_test', dbUsername, dbPasswor
 const SequelizeTokenify = require('../index');
 
 const chai = require('chai');
-chai.use(require('chai-as-promised'));
 const expect = chai.expect;
 
 function generateModel(name) {

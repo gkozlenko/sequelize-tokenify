@@ -1,12 +1,9 @@
 # sequelize-tokenify
 
-[![Build Status](https://travis-ci.org/gkozlenko/sequelize-tokenify.svg?branch=master)](https://travis-ci.org/gkozlenko/sequelize-tokenify)
+[![Build Status](https://github.com/gkozlenko/sequelize-tokenify/actions/workflows/node.js.yml/badge.svg)](https://github.com/gkozlenko/sequelize-tokenify/actions/workflows/node.js.yml)
+[![Test Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gkozlenko/5c6f38287f718d5962a0d63e3001d7a5/raw/sequelize-tokenify__heads_master.json)](https://github.com/gkozlenko/sequelize-tokenify/actions/workflows/node.js.yml)
 [![npm Version](https://img.shields.io/npm/v/sequelize-tokenify.svg)](https://www.npmjs.com/package/sequelize-tokenify)
-[![Maintainability](https://api.codeclimate.com/v1/badges/d70ff40c820582c990cb/maintainability)](https://codeclimate.com/github/gkozlenko/sequelize-tokenify/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/d70ff40c820582c990cb/test_coverage)](https://codeclimate.com/github/gkozlenko/sequelize-tokenify/test_coverage)
 [![GitHub License](https://img.shields.io/github/license/gkozlenko/sequelize-tokenify.svg)](https://github.com/gkozlenko/sequelize-tokenify/blob/master/LICENSE)
-[![Donate using PayPal](https://img.shields.io/badge/paypal-donate-green.svg)](https://www.paypal.me/pipll)
-[![Buy me a Coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-green.svg)](https://www.buymeacoffee.com/NIUeF95)
 
 Add unique tokens to sequelize models
 

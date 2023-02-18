@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": "index",
   "author": {
-    "name": "Gennadiy Kozlenko",
+    "name": "Gennady Kozlenko",
     "email": "gennadiy.kozlenko@gmail.com",
     "url": "https://github.com/gkozlenko/"
   },
@@ -24,22 +24,21 @@
   ],
   "scripts": {
     "prepare": "npm prune",
-    "test": "nyc --reporter=lcov mocha ./test/tests.js",
+    "test": "mocha ./test/tests.js",
+    "test_with_report": "nyc --reporter=text-summary mocha ./test/tests.js",
     "lint": "eslint \"lib/**\""
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "randomstring": "^1.1.5"
+    "randomstring": "^1.2.3"
   },
   "devDependencies": {
-    "bluebird": "^3.7.2",
-    "chai": "^4.3.3",
-    "chai-as-promised": "^7.1.1",
-    "eslint": "^7.25.0",
-    "mocha": "^10.2.0",
+    "chai": "^4.3.7",
+    "eslint": "^7.32.0",
+    "mocha": "^9.2.2",
     "mysql": "^2.18.1",
-    "mysql2": "^2.2.5",
+    "mysql2": "^2.3.3",
     "nyc": "^15.1.0",
-    "sequelize": "^6.6.2"
+    "sequelize": "^6.28.0"
   }
 }
