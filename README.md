@@ -74,6 +74,8 @@ All options are optional.
 - `generate[TokenField]` - Generates a new token without saving the model.
 - `update[TokenField]` - Generates a new token and saves the model.
 
+Every this method accepts one optional parameter - `options`.
+
 For `recovery_token` field module will create these methods:
 
 - `generateRecoveryToken`
