@@ -1,9 +1,9 @@
 # sequelize-tokenify
 
-[![Build Status](https://github.com/gkozlenko/sequelize-tokenify/actions/workflows/node.js.yml/badge.svg)](https://github.com/gkozlenko/sequelize-tokenify/actions/workflows/node.js.yml)
-[![Test Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gkozlenko/5c6f38287f718d5962a0d63e3001d7a5/raw/sequelize-tokenify__heads_master.json)](https://github.com/gkozlenko/sequelize-tokenify/actions/workflows/node.js.yml)
-[![npm Version](https://img.shields.io/npm/v/sequelize-tokenify.svg)](https://www.npmjs.com/package/sequelize-tokenify)
-[![GitHub License](https://img.shields.io/github/license/gkozlenko/sequelize-tokenify.svg)](https://github.com/gkozlenko/sequelize-tokenify/blob/master/LICENSE)
+[![build status](https://github.com/gkozlenko/sequelize-tokenify/actions/workflows/node.js.yml/badge.svg)](https://github.com/gkozlenko/sequelize-tokenify/actions/workflows/node.js.yml)
+[![test coverage](https://gkozlenko.github.io/sequelize-tokenify/badges/coverage.svg)](https://github.com/gkozlenko/sequelize-tokenify/actions/workflows/node.js.yml)
+[![npm version](https://img.shields.io/npm/v/sequelize-tokenify.svg)](https://www.npmjs.com/package/sequelize-tokenify)
+[![license](https://img.shields.io/github/license/gkozlenko/sequelize-tokenify.svg)](https://github.com/gkozlenko/sequelize-tokenify/blob/master/LICENSE)
 
 Add unique tokens to sequelize models
 
